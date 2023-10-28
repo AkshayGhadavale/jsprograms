@@ -1,0 +1,25 @@
+   // Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const date = new Date()
+console.log(weekday[date.getDay()])
+let today= date.getDate();
+let month =date.getMonth();
+let Year =date.getFullYear();
+
+console.log(today+'/'+month+'/'+Year)
+
+ let hours = date.getHours();
+    let minutes = date.getMinutes();
+ 
+    // Check whether AM or PM
+    let newformat = hours >= 12 ? 'PM' : 'AM';
+ 
+    // Find current hour in AM-PM Format
+    hours = hours % 12;
+ 
+    // To display "0" as "12"
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+ 
+    console.log(hours + ':' + minutes + ' ' + newformat);
